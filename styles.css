@@ -1,0 +1,195 @@
+* {
+  cursor: cell;
+  color: rgb(53, 53, 53);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  width: fit-content;
+  cursor: pointer;
+  color: rgb(245, 44, 44);
+}
+
+a:hover {
+  color: rgb(53, 53, 53);
+}
+
+body {
+  margin: 5px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+}
+
+.content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-heading {
+  padding-right: 20px;
+  display: flex;
+  justify-content: end;
+}
+
+.information {
+  text-align: end;
+  width: 70%;
+}
+
+.scrolling-text {
+  font-weight: bolder;
+  position: relative;
+  width: 50%;
+
+  overflow: hidden;
+  text-align: start;
+  font-size: 2.9rem;
+  line-height: 3rem;
+}
+
+.scrolling {
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  animation: scroll-left 10s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.opening {
+  font-size: 5rem;
+  line-height: 4rem;
+  color: rgb(245, 44, 44);
+  /* Starting position */
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h2 a {
+  color: rgb(53, 53, 53);
+}
+
+h2 a:hover {
+  color: rgb(245, 44, 44);
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+h3 a {
+  color: rgb(53, 53, 53);
+}
+
+h3 a:hover {
+  color: rgb(245, 44, 44);
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  width: 30%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.the-title {
+  line-height: 3.5rem;
+}
+
+.the-title:hover {
+  color: rgb(245, 44, 44);
+}
+
+.artist-list {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+.artist-list a {
+  color: rgb(53, 53, 53);
+}
+
+.artist-list a:hover {
+  color: rgb(245, 44, 44);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  overflow: hidden;
+}
+article {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: end;
+}
+.slider {
+  width: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.prev,
+.next {
+  font-size: 50px;
+  opacity: 0.75;
+  color: gray;
+  padding: 10px;
+  cursor: pointer;
+}
